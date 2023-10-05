@@ -1,9 +1,8 @@
-require("dotenv").config(); // ALLOWS ENVIRONMENT VARIABLES TO BE SET ON PROCESS.ENV SHOULD BE AT TOP
+require("dotenv").config(); 
 
 const express = require("express");
 const app = express();
 
-// Middleware
 app.use(express.json()); // parse json bodies in the request object
 
 // Redirect requests to endpoint starting with /posts to postRoutes.js
