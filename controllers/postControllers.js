@@ -23,6 +23,7 @@ exports.createNewPost = async (req, res, next) => {
     }
 };
 
+
 exports.getPostById = async (req, res, next) => {
     try {
         let postId = req.params.id;

@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
-app.use(express.json()); // parse json bodies in the request object
+app.use(express.json()); 
 
 app.use("/posts", require("./routes/postRoutes"));
 
@@ -17,6 +17,5 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Listen on pc port
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
