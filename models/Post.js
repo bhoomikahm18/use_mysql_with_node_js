@@ -5,6 +5,7 @@ class Post {
         this.title = title;
         this.body = body;
     }
+    
     save() {
         let d = new Date();
         let yyyy = d.getFullYear();
