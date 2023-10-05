@@ -1,10 +1,9 @@
-require("dotenv").config(); // ALLOWS ENVIRONMENT VARIABLES TO BE SET ON PROCESS.ENV SHOULD BE AT TOP
-
+require("dotenv").config();
 const express = require("express");
 const app = express();
 
 // Middleware
-app.use(express.json()); // parse json bodies in the request object
+app.use(express.json());
 
 // Redirect requests to endpoint starting with /posts to postRoutes.js
 app.use("/posts", require("./routes/postRoutes"));
@@ -18,4 +17,5 @@ app.use((err, req, res, next) => {
     res.status(500).json({
         message: "Something went rely wrong",
     });
+
 });
